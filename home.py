@@ -2,16 +2,14 @@ import streamlit as st
 from savings_account import SavingsAccount
 from current_account import CurrentAccount
 
-# Initialize accounts
+# accounts
 savings = SavingsAccount(20000)
 current = CurrentAccount(1000)
 
 st.set_page_config(page_title="Bank App", layout="centered")
-
-# Streamlit UI for account operations
 st.title("Bank Account Operations")
 
-# Choose account type
+# Choose account the account type
 account_type = st.selectbox("Choose Account", ["Savings Account", "Current Account"])
 
 if account_type == "Savings Account":
